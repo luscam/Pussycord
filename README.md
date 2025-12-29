@@ -1,4 +1,4 @@
-# Pussycord
+# 🐱 Pussycord
 
 ![Version](https://img.shields.io/badge/dynamic/yaml?url=https://raw.githubusercontent.com/luscam/Pussycord/main/VERSION&query=$&label=version&color=blue) ![Build](https://img.shields.io/badge/build-passing-success) ![Security](https://img.shields.io/badge/security-hardened-red) ![Platform](https://img.shields.io/badge/platform-windows-blue)
 
