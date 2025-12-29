@@ -1,6 +1,6 @@
 # Pussycord
 
-![Version](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/luscam/Pussycord/main/VERSION&query=$.version&label=version&color=blue) ![Build](https://img.shields.io/badge/build-passing-success) ![Security](https://img.shields.io/badge/security-hardened-red) ![Platform](https://img.shields.io/badge/platform-windows-blue)
+![Version](https://img.shields.io/badge/dynamic/yaml?url=https://raw.githubusercontent.com/luscam/Pussycord/main/VERSION&query=$&label=version&color=blue) ![Build](https://img.shields.io/badge/build-passing-success) ![Security](https://img.shields.io/badge/security-hardened-red) ![Platform](https://img.shields.io/badge/platform-windows-blue)
 
 Pussycord is a modified implementation of Discord Canary entirely rewritten in C#. I have three years of programming experience and developed this project to address specific privacy concerns found in the standard client.
 
