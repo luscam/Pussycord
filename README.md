@@ -1,44 +1,41 @@
 # Pussycord 🐱
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![Platform](https://img.shields.io/badge/platform-windows-blue) ![Paranoia Level](https://img.shields.io/badge/paranoia-maximum-red) ![C#](https://img.shields.io/badge/language-C%23-purple)
+![Build Status](https://img.shields.io/badge/build-beta-orange) ![Platform](https://img.shields.io/badge/platform-windows-blue) ![Privacy](https://img.shields.io/badge/privacy-paranoid-red) ![C#](https://img.shields.io/badge/language-C%23-purple)
 
-So, here we are. You've stumbled upon **Pussycord**. Yeah, I know the name's a bit... out there. Get over it.
+Alright, welcome to **Pussycord**. Yeah, the name stays.
 
-This isn't your standard, bloated chat app. It's a modified version of **Discord Canary**, rewritten with C# because, frankly, I needed more control over what happens under the hood. I’ve been coding for two decades, and if there's one thing I’ve learned, it’s that trusting default clients with your data is a rookie mistake.
+Here’s the deal: this is a modified version of **Discord Canary**, completely rewritten in C#. I’ve been coding for about three years now—not a lifetime, sure, but long enough to realize that standard chat clients leak data like a sieve. I built this because I wanted to sleep better at night.
 
-### Why does this exist?
+This is an **initial release**. It’s raw.
 
-Look, the internet is a mess. A literal minefield. You click one wrong link in a "general" channel and suddenly some script kiddie has your token or your IP. I got tired of worrying about it.
+### What is this thing?
 
-Pussycord is my answer to that anxiety. It’s built for privacy first. Everything else is secondary.
+It's Discord, but locked down. I haven't touched the UI—it looks and feels exactly like the vanilla app you're used to. I didn't want to mess with the visuals yet; I wanted to mess with the security.
 
-### The Good Stuff (Features)
+The goal right now is pure user safety. Making it pretty or adding bells and whistles comes later.
 
-I didn't bloat this with useless plugins or themes. It does what it needs to do to keep you safe.
+### Features (The Safety Net)
 
-*   **The Sandbox:** This is the cool part. The application creates a sandbox around the Discord process. Think of it like a hazmat suit for your PC. If something goes wrong inside the app, it stays inside the app. It doesn't leak out to your main system processes.
-*   **Paranoid Security:**
-    *   **Anti-Token-Grabber:** Stops those nasty scripts dead in their tracks. Your token stays yours.
-    *   **Anti-IP-Logger:** We filter out the sketchy stuff before it even has a chance to ping back home.
-*   **The Browser Situation:**
-    *   I threw in an **integrated browser**. It’s sandboxed too. You can open links right there without exposing your main Chrome or Firefox data.
-    *   Don't like it? Fine. You can still set it to open links in your normal default browser if you really want to live dangerously (or just trust your adblocker). Choice is yours.
+*   **The Sandbox:** The app creates a sandbox around the Discord process. It’s like a quarantine zone. If something nasty tries to execute, it stays trapped inside the Pussycord process and shouldn't touch your actual system files.
+*   **Anti-Token-Grabber:** Blocks scripts trying to snag your auth token.
+*   **Anti-IP-Logger:** Filters out the sketchy connections before they can dox you.
+*   **The Browser:**
+    *   There's an **integrated browser** for opening links safely within the sandbox.
+    *   Prefer your own setup? You can still toggle it to use your default browser. Up to you.
 
-### Getting Started
+### What's Missing? (For Now)
 
-Honestly, it's pretty plug-and-play right now.
+I'm playing the long game here.
 
-1.  Grab the latest release.
-2.  Run the executable.
-3.  Log in (safely, for once).
+*   **No Plugins:** We don't support plugins yet. I know, I know. But adding third-party code defeats the purpose of a secure client until I can build a stable framework for it. It's planned for the future.
+*   **Updates:** It’s simple. The app checks a local `VERSION` file to see where it's at. No complex auto-updaters breaking things in the background just yet.
 
-### A Note on Development
+### The Plan
 
-I'm just one person working on this when I have time (and enough coffee). It's an initial release. It might act weird sometimes. The UI isn't winning any beauty pageants yet. But it’s secure, and it works.
+Right now? Stability and privacy.
+Later? A cleaner codebase, maybe some UI tweaks, and eventually a safe way to handle plugins.
 
-If you find a bug, open an issue. If you hate the name... well, I can't help you there.
-
-Stay safe out there.
+I'm just one dev doing this to keep my own data safe. If it helps you too, awesome. If you find a bug (and you probably will), let me know.
 
 ---
-*Disclaimer: I'm not responsible if you get banned for using a modified client, though I've done my best to keep it under the radar. Use your head.*
+*Disclaimer: Use at your own risk. I'm doing my best to make this secure, but I'm not a corporation with a thousand engineers. Just a guy who likes C# and hates getting IP logged.*
