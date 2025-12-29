@@ -1,41 +1,39 @@
-# Pussycord 🐱
+# Pussycord
 
-![Build Status](https://img.shields.io/badge/build-beta-orange) ![Platform](https://img.shields.io/badge/platform-windows-blue) ![Privacy](https://img.shields.io/badge/privacy-paranoid-red) ![C#](https://img.shields.io/badge/language-C%23-purple)
+![Build Status](https://img.shields.io/badge/build-initial_release-orange) ![Platform](https://img.shields.io/badge/platform-windows-blue) ![Security](https://img.shields.io/badge/security-hardened-red) ![Language](https://img.shields.io/badge/language-C%23-purple)
 
-Alright, welcome to **Pussycord**. Yeah, the name stays.
+Pussycord is a modified implementation of Discord Canary entirely rewritten in C#. I have been programming for three years and developed this project to address specific privacy concerns found in the standard client.
 
-Here’s the deal: this is a modified version of **Discord Canary**, completely rewritten in C#. I’ve been coding for about three years now—not a lifetime, sure, but long enough to realize that standard chat clients leak data like a sieve. I built this because I wanted to sleep better at night.
+This is an initial release. The primary focus is security rather than visual customization. I have not altered the standard Discord user interface.
 
-This is an **initial release**. It’s raw.
+### Core Functionality
 
-### What is this thing?
+ The application prioritizes data protection through several mechanisms.
 
-It's Discord, but locked down. I haven't touched the UI—it looks and feels exactly like the vanilla app you're used to. I didn't want to mess with the visuals yet; I wanted to mess with the security.
+*   **Process Sandboxing**
+    The client creates a sandbox environment around the Discord process. This isolation ensures that any malicious execution within the application remains contained and cannot access your main system files.
 
-The goal right now is pure user safety. Making it pretty or adding bells and whistles comes later.
+*   **Security Filters**
+    I implemented active protections against common threats. The client blocks token grabbers and filters connections to prevent IP logging attempts.
 
-### Features (The Safety Net)
+*   **Link Handling**
+    There is an integrated web browser that runs inside the sandbox. This allows you to open links without exposing your main browser data. You can disable this feature and use your default system browser if you prefer.
 
-*   **The Sandbox:** The app creates a sandbox around the Discord process. It’s like a quarantine zone. If something nasty tries to execute, it stays trapped inside the Pussycord process and shouldn't touch your actual system files.
-*   **Anti-Token-Grabber:** Blocks scripts trying to snag your auth token.
-*   **Anti-IP-Logger:** Filters out the sketchy connections before they can dox you.
-*   **The Browser:**
-    *   There's an **integrated browser** for opening links safely within the sandbox.
-    *   Prefer your own setup? You can still toggle it to use your default browser. Up to you.
+### Development Status
 
-### What's Missing? (For Now)
+The project is currently in a beta state.
 
-I'm playing the long game here.
+*   **Updates**
+    The application checks a local `VERSION` file to determine the current build status.
+    
+*   **Plugins**
+    There is no support for plugins at this time. I plan to implement a secure plugin framework in future versions once the core stability is confirmed.
 
-*   **No Plugins:** We don't support plugins yet. I know, I know. But adding third-party code defeats the purpose of a secure client until I can build a stable framework for it. It's planned for the future.
-*   **Updates:** It’s simple. The app checks a local `VERSION` file to see where it's at. No complex auto-updaters breaking things in the background just yet.
+*   **Interface**
+    The visual interface is identical to the vanilla Discord client.
 
-### The Plan
+This is a personal project aimed at improving user security.
 
-Right now? Stability and privacy.
-Later? A cleaner codebase, maybe some UI tweaks, and eventually a safe way to handle plugins.
+***
 
-I'm just one dev doing this to keep my own data safe. If it helps you too, awesome. If you find a bug (and you probably will), let me know.
-
----
-*Disclaimer: Use at your own risk. I'm doing my best to make this secure, but I'm not a corporation with a thousand engineers. Just a guy who likes C# and hates getting IP logged.*
+*Disclaimer: This software is provided as is. I am not responsible for account limitations resulting from the use of modified clients.*
