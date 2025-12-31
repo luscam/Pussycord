@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/badge/dynamic/yaml?url=https://raw.githubusercontent.com/luscam/Pussycord/main/VERSION&query=$&label=version&color=blue) ![Build](https://img.shields.io/badge/build-passing-success) ![Security](https://img.shields.io/badge/security-hardened-red) ![Platform](https://img.shields.io/badge/platform-windows-blue)
 
-Pussycord is a modified implementation of Discord Canary entirely rewritten in C#. I have three years of programming experience and developed this project to address specific privacy concerns found in the standard client.
+Pussycord is a modified implementation of Discord Canary entirely written in C#. I have three years of programming experience and developed this project to address specific privacy concerns found in the standard client.
 
 This is an initial release. The primary focus is security rather than visual customization. I have not altered the standard Discord user interface.
 
